@@ -1,4 +1,4 @@
-let consolaPlaystation = [
+/*let consolaPlaystation = [
     {nombre: "Playstation1", precio: 2000},
     {nombre: "Playstation2", precio: 4000},
     {nombre: "Playstation3", precio: 30000},
@@ -44,4 +44,11 @@ function comprar(comprar){
     }
 }
 let filt = comprar ("filtrar")
-console.log(filt(5000));
+console.log(filt(5000));*/
+let formulario = document.getElementById("form");
+formulario.addEventListener("submit", function(e){
+    e.preventDefault();
+    let mail = document.getElementById("email-form").value;
+    console.log(mail);
+
+})
