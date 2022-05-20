@@ -41,7 +41,7 @@ const CONSOLAS = [
     }
 ];
 
-localStorage.setItem("juegos", JSON.stringify(CONSOLAS));
+
 
 
 const getCard = (item) => {
@@ -99,3 +99,27 @@ const agregarCarrito = (id) => {
 }
 
 cargarConsolas (CONSOLAS, contenedor, false);
+
+function cargarLocalStorage () {
+    const productosIniciales = [
+        {id: 1, producto: "Playstation3"},
+        {id: 2, producto: "Playstation4"},
+        {id: 3, producto: "Playstation5"},
+        {id: 4, producto: "Xbox360"},
+        {id: 1, producto: "Xbox serie s"},
+
+    ];
+ localStorage.setItem("productos", JSON.stringify(productosIniciales));   
+}
+
+cargarLocalStorage()
+function agregar (nombre){
+    let listaProductos = JSON.parse(localStorage.getItem("productos"));
+    let product = {id: listaproductos.lenght + 1, producto: nombre};
+
+    listaProductos.push (product);
+    localStorage.setItem("productos", JSON.stringify(listaProductos));
+}
+
+let nombre = prompt("por favor ingrese el producto");
+agregar(nombre);
