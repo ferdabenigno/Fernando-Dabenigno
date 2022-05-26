@@ -1,6 +1,6 @@
 
 const contenedor = document.getElementById("consolas");
-const tablaCarrito = document.getElementById("tablaCarrito")
+const tablaCarrito = document.getElementById("tablaCarrito");
 const carrito = localStorage.getItem("carrito") || [];
 
 const CONSOLAS = [
@@ -76,7 +76,7 @@ const getRow = (item) => {
 const cargarConsolas = (datos, nodo, esTabla) => {
     let acumulador = ""
     datos.forEach((el) => {
-        acumulador += esTabla ? getRow(el): getCard(el) ;
+        acumulador += esTabla ? getRow(el) : getCard(el) ;
 
     })
     nodo.innerHTML = acumulador;
@@ -84,7 +84,7 @@ const cargarConsolas = (datos, nodo, esTabla) => {
 const agregarCarrito = (id) => {
     const seleccion = CONSOLAS.find(item => item.id === id);
     const busqueda = carrito.findIndex(el => el.id === id);
-    if (busquedas === -1){
+    if (busqueda === -1){
         carrito.push({
             id: seleccion.id,
             nombre: seleccion.nombre,
@@ -106,7 +106,7 @@ function cargarLocalStorage () {
         {id: 2, producto: "Playstation4"},
         {id: 3, producto: "Playstation5"},
         {id: 4, producto: "Xbox360"},
-        {id: 1, producto: "Xbox serie s"},
+        {id: 5, producto: "Xbox serie s"},
 
     ];
  localStorage.setItem("productos", JSON.stringify(productosIniciales));   
@@ -121,5 +121,3 @@ function agregar (nombre){
     localStorage.setItem("productos", JSON.stringify(listaProductos));
 }
 
-let nombre = prompt("por favor ingrese el producto");
-agregar(nombre);
