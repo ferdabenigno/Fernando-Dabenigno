@@ -121,3 +121,10 @@ function agregar (nombre){
     localStorage.setItem("productos", JSON.stringify(listaProductos));
 }
 
+const datosJson = async () => {
+    let response = await fetch ("./api.json")
+    let data = await response.json()
+    console.log(response)
+    console.log(data);
+}
+/* utilice bootstrap por que facilita enormemente el diseño de interfaces y ademas incluye por defecto una plantilla bastante optimizada. Se adapta bien a mobile y escritorio.*/
