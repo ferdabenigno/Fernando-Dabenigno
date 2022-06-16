@@ -1,0 +1,45 @@
+/*HEADER*/
+header {
+    background-image: url("../img/header3.webp");
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
+    #grantitulo {
+      font-weight: 800;
+      font-size: 80px;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      color: black; }
+    
+      
+    nav {
+      background-color: green; 
+    
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none; 
+    
+        li {
+          font-size: 15px; 
+    
+          a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500; }
+          }
+          
+        }
+      }  
+
+  }
+
+  header nav ul li a:hover{
+    color: white;
+  }
+  
+ 
+  
+ 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Polideportivo Don Bosco </title>
+	<meta name="descripcion" content="LLega a Gerli y veni a disfrutar de un dia de futbol pileta o tu deporte favorito">
+	<meta name="keywords" content="canchas , pileta,deportes,escuelita">
+	<meta name="author" content="Fernando DAbenigno">
+	<meta name="copyright" content="Polideportivo Don Bosco">
+    <link rel="stylesheet" href="../css/estilo.css">
+     <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto?preview.text=Casi%20antes%20de%20que%20nos%20di%C3%A9ramos%20cuenta,%20hab%C3%ADamos%20dejado%20el%20suelo.&preview.text_type=custom">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js
+    ">    </script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+
+<body>
+	<nav>
+		<img src="../logo/logoclubvjo.svg" alt="Logo del Polideportivo">
+		<header class="encabezado_box--white">     
+               <p class="novedades_titulo--md">Reserva tu cancha YA al 1139058270</p>
+             <!-- <img src="../../imagenes/escuelita.jpg" alt=""> -->
+      </header>
+ 
+   </nav>
+
+		<main>
+      
+        <div id="nada" >
+        <h1  class="novedades_titulo--md">Hace tu reserva ahora SELECCIONA y ALQUILA</h1>
+        <section id="contenedor-grid" >
+            <figure class="botonera"  >
+            <img  class="w-100" src="../imagenes/cancha 7.jpg " alt="cancha de 7" >
+             <figcaption> Cancha de 7</figcaption>
+             <p class="price"> $ 5.000,00</p>
+             <button onclick="confirmaalquiler(1)">Seleccion</button>
+            
+           </figure>
+
+            <figure class="botonera"  > 
+            <img class="w-100" src="../imagenes/cinco.jpeg" alt="cancha de 5">
+             <figcaption> Cancha de 5 </figcaption>
+             <p  class="price"> $3.500,00</p>
+             <button onclick="confirmaalquiler(2)">Seleccion</button>
+             </figure>
+
+            <figure class="botonera"  > 
+            <img class="w-100" src="../imagenes/cancha 9.jpg " alt="cancha de 9">
+             <figcaption> Cancha de 9</figcaption>
+             <p  class="price"> $7.000,00</p>
+             <button onclick="confirmaalquiler(3)">Seleccion</button>
+             </figure>
+
+            <figure class="botonera"  >
+            <img class="w-100" src="../imagenes/paddle.svg" alt="Paddle">
+             <figcaption> Paddle</figcaption>
+             <p class="price"> $3000,00</p>
+             <button onclick="confirmaalquiler(4)">Seleccion</button>
+            </figure>
+             <figure class="botonera" >
+            <img  class="w-100" src="../imagenes/fronton.svg" alt="fronton" >
+             <figcaption> Fronton</figcaption>
+             <p class="price"> $ 2.000,00</p>
+             <button onclick="confirmaalquiler(5)">Seleccion</button>
+            </figure>
+            <div  class="container" class="w100">
+           <h3>Datos del clima</h3>
+           <br>
+           <div class="icon">---</div>
+           <div class="temp" >-°C</div>
+          <div class="summary" ></div>
+          <div class="location"></div>
+           </div>
+            </section>
+            </div>
+
+            <div id="nada2"> 
+                
+           <section id="contenedor-grid" >
+            <figure class="botonera"  > 
+            <img class="w-100" src="../imagenes/salones.jpeg" alt="salones">
+             <figcaption> Salones</figcaption>
+             <p  class="price"> $9.500,00</p>
+             <button onclick="confirmaalquiler(6)">Seleccion</button>
+            </figure>
+
+            <figure class="botonera"  > 
+            <img class="w-100" src="../imagenes/escuelita.jpg" alt="Escuelita">
+             <figcaption> Escuelita Futbol</figcaption>
+             <p  class="price"> $3.000,00</p>
+             <button onclick="confirmaalquiler(7)">Seleccion</button>
+             </figure>
+
+            <figure class="botonera"  >
+            <img class="w-100" src="../imagenes/pileta.jpg " alt="Pileta">
+             <figcaption> Socio Pileta</figcaption>
+             <p class="price"> $10.000,00</p>
+             <button onclick="confirmaalquiler(8)">Seleccion</button>
+            </figure> 
+            <figure class="botonera"  >
+            <img  class="w-100" src="../imagenes/colonia.jpeg" alt="Colonia" >
+             <figcaption> Colonia Vacaciones</figcaption>
+             <p class="price"> $ 12.000,00</p>
+             <button onclick="confirmaalquiler(9)">Seleccion</button>
+            </figure>
+           </section>
+              <input type="button" id="enviar" value="Estado Reserva" onclick="dispararSwalsin()">
+             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
+
+         </div>
+
+   
+    <div id="titulo" class="titulo"></div>
+    <div id="saludo"></div>
+
+
+    </main>
+ 
+
+
+
+   
+
+   	<footer id="two"> 
+    
+    <h3 class="novedades_titulo--md" class="pie">Redes Sociales</h3>
+    <div class="footertodo">
+    <div><img class="fooretodo" src="../logo/facebook.png" alt="facebook"></div>   
+
+    <div><img class="footertodo" src="../logo/twitter.png" alt="twitter"></div> 
+
+     <div><img class="footertodo" src="../logo/instegram.png" alt="instegram"></div> 
+     <div><img class="footertodo" src="../logo/wassap.png" alt="wassap"></div> 
+     </div>
+     <p class="novedades_titulo--md">Reserva tu cancha YA al 1139058270</p> 
+     
+  </footer>
+	
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   <script src="../js/alquila.js"></script>
+</body>
+</html>

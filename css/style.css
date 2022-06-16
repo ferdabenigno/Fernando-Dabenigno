@@ -1,0 +1,233 @@
+/*colores*/
+* {
+  margin: 0%;
+  padding: 0%; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+/*HEADER*/
+header {
+  background-image: url("../img/header3.webp");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  header #grantitulo {
+    font-weight: 800;
+    font-size: 80px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; }
+  header nav {
+    background-color: green; }
+    header nav ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none; }
+      header nav ul li {
+        font-size: 15px; }
+        header nav ul li a {
+          text-decoration: none;
+          color: black;
+          font-weight: 500; }
+
+header nav ul li a:hover {
+  color: white; }
+
+/*MAIN index*/
+main {
+  background-color: black;
+  padding: 1rem; }
+  main .carousel-item {
+    height: 550px; }
+    main .carousel-item .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+h2 {
+  font-size: 60px;
+  font-style: italic;
+  text-align: center;
+  color: #dbdbdb;
+  background-color: #065e06; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px; }
+
+.Titulonov {
+  font-size: 40px;
+  text-align: center;
+  color: #dbdbdb;
+  background-color: #065e06;
+  font-style: italic; }
+
+.card, .card-2 {
+  margin-bottom: 50px;
+  height: 200px;
+  background-color: #5d5de4; }
+  .card .card-text, .card-2 .card-text {
+    color: black; }
+
+.card-2 {
+  background-color: #42ac38; }
+
+iframe {
+  width: 100%; }
+
+/* Main galeria*/
+.grillagaleria {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6";
+  align-content: space-around;
+  justify-content: space-between;
+  column-gap: 2%;
+  align-items: center;
+  justify-items: center; }
+  .grillagaleria .contenedorgaleria1 {
+    height: 80%;
+    width: 80%;
+    grid-area: foto1; }
+  .grillagaleria .contenedorgaleria2 {
+    height: 80%;
+    width: 80%;
+    grid-area: foto2; }
+  .grillagaleria .contenedorgaleria3 {
+    height: 80%;
+    width: 80%;
+    grid-area: foto3; }
+  .grillagaleria .contenedorgaleria4 {
+    height: 80%;
+    width: 80%;
+    grid-area: foto4; }
+  .grillagaleria .contenedorgaleria5 {
+    height: 80%;
+    width: 80%;
+    grid-area: foto5; }
+  .grillagaleria .contenedorgaleria6 {
+    height: 80%;
+    width: 80%;
+    grid-area: foto6; }
+
+/*main contacto*/
+.formulario p {
+  text-align: center; }
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.formulario form input, textarea {
+  width: 70%;
+  border-radius: 5px;
+  margin: 0.5rem;
+  padding: 0.5rem; }
+
+/*main actividades*/
+#columnaact {
+  display: flex;
+  flex-direction: column; }
+  #columnaact .descripcionact {
+    list-style: square;
+    font-size: 20px;
+    color: white; }
+
+/* Main eventos*/
+.grillaeventos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "eventos1"  "eventos2";
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  gap: 1%; }
+
+.contenedoreventos1 {
+  grid-area: eventos1;
+  width: 100%; }
+
+.contenedoreventos2 {
+  grid-area: eventos2;
+  width: 100%; }
+
+.columnaeventos {
+  display: flex;
+  flex-direction: column;
+  background-color: #086808;
+  padding: 1rem; }
+  .columnaeventos .descripcioneventos {
+    list-style: square;
+    font-size: 20px;
+    color: white;
+    list-style-position: inside; }
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  height: 100px;
+  align-items: center; }
+
+footer div {
+  display: flex;
+  padding: 1rem; }
+
+footer div .imgredsocial {
+  width: 60px;
+  padding: 0 1rem; }
+
+.piedepagina {
+  text-align: center; }
+
+@media only screen and (max-width: 600px) {
+  header #grantitulo {
+    font-size: 50px; }
+  nav ul {
+    flex-direction: column;
+    align-items: center; }
+  nav ul li {
+    padding: 0.3rem 0; }
+  /*mobile galeria*/
+  .grillagaleria {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "foto1" "foto2" "foto3"    "foto4"    "foto5"    "foto6"; }
+  .contenedorgaleria1 {
+    grid-area: foto1; }
+  .contenedorgaleria2 {
+    grid-area: foto2; }
+  .contenedorgaleria3 {
+    grid-area: foto3; }
+  .contenedorgaleria4 {
+    grid-area: foto4; }
+  .contenedorgaleria5 {
+    grid-area: foto5; }
+  .contenedorgaleria6 {
+    grid-area: foto6; }
+  /*mobile index*/
+  main .carousel-item {
+    height: 300px; }
+  /*mobileactividades*/
+  .tituloact {
+    font-size: 40px; }
+  /*mobile eventos*/
+  .grillaeventos {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "foto1" "foto2"; }
+  .contenedoreventos1 {
+    grid-area: foto1; }
+  .contenedoreventos2 {
+    grid-area: foto2; } }

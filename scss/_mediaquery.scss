@@ -1,0 +1,46 @@
+@media only screen and (max-width: 600px) {
+    header #grantitulo {
+      font-size: 50px; }
+    nav ul {
+      flex-direction: column;
+      align-items: center; }
+    nav ul li {
+      padding: 0.3rem 0; }
+    /*mobile galeria*/
+    .grillagaleria {
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "foto1"
+   "foto2"
+   "foto3"   
+   "foto4"   
+   "foto5"   
+   "foto6"; }
+    .contenedorgaleria1 {
+      grid-area: foto1; }
+    .contenedorgaleria2 {
+      grid-area: foto2; }
+    .contenedorgaleria3 {
+      grid-area: foto3; }
+    .contenedorgaleria4 {
+      grid-area: foto4; }
+    .contenedorgaleria5 {
+      grid-area: foto5; }
+    .contenedorgaleria6 {
+      grid-area: foto6; }
+    /*mobile index*/
+    main .carousel-item {
+      height: 300px; }
+    /*mobileactividades*/
+    .tituloact {
+      font-size: 40px; }
+    /*mobile eventos*/
+    .grillaeventos {
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "foto1"
+   "foto2"; }
+    .contenedoreventos1 {
+      grid-area: foto1; }
+    .contenedoreventos2 {
+      grid-area: foto2; } }

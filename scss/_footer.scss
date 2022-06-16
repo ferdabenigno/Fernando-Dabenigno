@@ -1,0 +1,19 @@
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    height: 100px;
+    align-items: center;}
+  
+  footer div {
+    display: flex;
+    padding: 1rem; }
+  
+  footer div .imgredsocial {
+    width: 60px;
+    padding: 0 1rem; }
+  
+  .piedepagina {
+    text-align: center; }
