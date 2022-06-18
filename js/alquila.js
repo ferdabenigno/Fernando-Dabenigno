@@ -142,23 +142,6 @@ function guardarjson() {
  
 let objetoCadena = JSON.stringify(CLIENTES);
 let objetoObjeto = JSON.parse(objetoCadena);
-console.log(CLIENTES);
-console.log(objetoCadena);
-console.log(objetoObjeto);
-
-
-// guardo en forma local los datos
-localStorage.setItem("nombre", nombrege);
-localStorage.setItem("telefono", telefono);
-localStorage.setItem("fecha reserva", fechar);
-let variableNombre = localStorage.getItem("nombre");
-let variableTelefono = localStorage.getItem("telefono");
-let variableFecha = localStorage.getItem("nombre");
-let todoelobjeto = localStorage.getItem(objetoCadena)
-console.log(variableNombre);
-console.log(variableTelefono);
-console.log(variableFecha);
-
                            }
 
 function ingresarnombre() {   
