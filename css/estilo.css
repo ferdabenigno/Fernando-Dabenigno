@@ -12,10 +12,38 @@ color: 	blue; font-family: fantasy;
           }
 section article	p{  color: grey }
 
-nav{background-color: rgba(177, 188 ,270, 0.5);}
+div{background-color: green; 
+    };
 
 nav ol{list-style: none;}
+/*HEADER*/
+header {
+  background-image: url("../img/header3.webp");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  header #grantitulo {
+    font-weight: 800;
+    font-size: 80px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; }
+  header nav {
+    background-color: green; }
+    header nav ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none; }
+      header nav ul li {
+        font-size: 15px; }
+        header nav ul li a {
+          text-decoration: none;
+          color: black;
+          font-weight: 500; }
 
+header nav ul li a:hover {
+  color: white; }
 /*ben*/
 
 .novedades_titulo--xxl{font-size: 4rem}
@@ -25,7 +53,7 @@ nav ol{list-style: none;}
 .novedades_articulo {width: auto%;overflow:
  auto;height: auto;margin: 10px auto;padding: auto;
   }
-.encabezado nav{background-color:black; 
+.encabezado nav{background-color:white; 
 	            padding: auto 
 	           }
 .encabezado nav ol{display: inline-block;
@@ -34,7 +62,7 @@ nav ol{list-style: none;}
 	                  margin: 20px
 	                 }
 .encabezado nav ol li a:hover{font font-weight: 800;
-                             color: black
+                             color: white
                              }
 .encabezado_box--white{ text-align: center;
 	                    background-color: white; 
@@ -56,7 +84,7 @@ nav ol{list-style: none;}
         }  
 .pie_icon--sm{background-color: brown
 }
-.pie_titulo--md{font-size: 30px; background-color: black}
+.pie_titulo--md{font-size: 30px; background-color: white}
 
 
 
@@ -75,19 +103,26 @@ nav ol{list-style: none;}
         margin : 0;
         height: 20rem;
         width: 15rem;
-        display: flex
+        color :white;
         padding-top: 3px;
         border-radius: 16px;
         border: 2px solid rgb(14, 43, 1);
         background-color: green;
         
       }
+    #grantitulo {
+    font-weight: 800;
+    font-size: 80px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; }
     
-    
+  
 .botonera{ background-color: green ;
           top: 0;
           padding:  10px 30px; 
           display flex; 
+          color : white;
           justify-content: space-between;
           align-items: center;
            }
@@ -95,7 +130,7 @@ nav ol{list-style: none;}
 	             }
 	  .botonera ol li a{font-size: 1.8rem 
 	                   }
-        .botonera ol li a:hover{ color: black;
+        .botonera ol li a:hover{ color: white;
                                 font-weight: 600;
                                  }
          .botoneragr img{ width: 50%;
@@ -107,7 +142,10 @@ nav ol{list-style: none;}
                   .botonera img{ width: 25%;
          	            padding-top: 10px
                                }
-                   
+                
+  
+   
+
  .footertodo{ background-color: green;
           top: 0;
           padding:  10px 30px; 
@@ -175,24 +213,11 @@ nav ol{list-style: none;}
 .colores { background-color: rgba(177, 188 ,270, 0.5);}
 
 
-/* animation header */
 
-header{
-	height: 70vh;
-	width: 750px;
-	background-image: url(../imagenes/escuelita.jpg);
-	animation-name: animateHeader;
-	animation-duration: 7s;
-	animation-iteration-count: infinite;
-	animation-delay: 3s;
-	animation-timing-function: ease;
-      }
+@media (min-width: 768px) {#grantitulo{ font-size: 50px; flex-direction: column; align-items: center; } }
 
-@keyframes animateHeader{
-	0%{background-image: url(../imagenes/pileta2.jpg)}
-	35%{background-image: url(../imagenes/pileta.jpg)}
-	70%{background-image: url(../imagenes/Promo 9.jpg)}
-	100%{background-image: url(../imagenes/Promo 7.jpg);}
-	
-                       }
+@media (max-width: 700px) and (min-width: 400px) {.footertodo { font-size: 50px; flex-direction: column; align-items: center;
+ text-align: left;} }
 
+@media (max-width: 700px) and (min-width: 400px) {#contenedor-grid { font-size: 50px; flex-direction: column; align-items: center;
+ text-align: left;} }

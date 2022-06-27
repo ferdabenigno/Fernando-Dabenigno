@@ -93,15 +93,14 @@ function validarfecha()
                     }  
 
   function ingresardatos() {
-     
      ingresarnombre();
      ingresartelefono(); 
      validarfecha ();
      validarhora () ;  
       if   (senial3 === 1  && senial4  === 1)
              {
+              guardarjson (); 
               mostrarenhtml ();
-              guardarjson ();   
               }
        else 
                {
@@ -128,7 +127,10 @@ tituloSaludo.innerHTML = ` <h2 class ="saludo"> Gracias  ${nombrege} Por tu rese
           
         </iframe>  <br>  <br>  
         
-        
+        <ul>
+        <li><a href="../index.html" class="bgLight">VOLVER A HOME</a></li>
+          
+                  </ul>
              `;
                        }
 
@@ -142,14 +144,26 @@ function guardarjson() {
  
 let objetoCadena = JSON.stringify(CLIENTES);
 let objetoObjeto = JSON.parse(objetoCadena);
+// guardo en forma local los datos
+localStorage.setItem("nombre", nombrege); 
+localStorage.setItem("telefono", telefono);
+localStorage.setItem("fecha reserva", fechar);
+variableNombre = localStorage.getItem("nombre");
+variableTelefono = localStorage.getItem("telefono");
+variableFecha = localStorage.getItem("fecha reserva");
+let todoelobjeto = localStorage.getItem(objetoCadena)
+
                            }
 
-function ingresarnombre() {   
-   fechar = " ";
+function ingresarnombre() {  
+   variableNombre = localStorage.getItem("nombre");
+   variableTelefono = localStorage.getItem("telefono");
+   variableFecha = localStorage.getItem("fecha reserva");
+   fechar = variableFecha ;
+   nombrege =  variableNombre ;
    horar = 0;
-   mensajeerror = " " ;
-   nombrege = "";
-   telefono = "";
+   mensajeerror = " " ;   
+   telefono = variableTelefono;
    parrafo = " ";
    parrafo2 = "" ;    
    CLIENTES.nombre = document.getElementById("nombrege").value  ;
@@ -165,7 +179,7 @@ function ingresartelefono() {
 
 
 function confirmaalquiler(variable){
-cancha = variable ; 
+ cancha = variable ; 
  parrafo = document.getElementById("nada");
  parrafo.remove();
  parrafo2 = document.getElementById("nada2");
@@ -192,7 +206,9 @@ tituloSaludo.innerHTML = `<h2 class ="saludo"> Hoy es ${ahora.day}/${ahora.month
         <input type="submit" id="enviar" value="Resevar Ahora" onclick="ingresardatos()" type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" class="novedades_titulo--md">
         <p id="datos"></p>
       <br>
-      
+      <ul>
+          <li><a href="../index.html" class="bgLight">VOLVER A HOME</a></li>
+                  </ul>
            
            `;
                        }
@@ -218,7 +234,9 @@ tituloSaludo.innerHTML = `<h2 class ="saludo"> Tuviste un error  -  ${mensajeerr
         <input type="submit" id="enviar" value="Resevar Ahora" onclick="ingresardatos()" class="novedades_titulo--md">
         <p id="datos"></p>
       <br>
-      
+      <ul>
+       <li><a href="../index.html" class="bgLight">VOLVER A HOME</a></li>
+             </ul>
            `;
                        }
    
@@ -294,7 +312,7 @@ const base =
           loc.textContent = data.name + "," + data.sys.country;
           let icon1 = data.weather[0].icon;
           icon.innerHTML = 
-              `<img src="logoclubvjo.svg" style= 'height:10rem'/>`;
+              `<img src="../logo/logoclubvjo.svg" style= 'height:10rem'/>`;
         });
  
                   }
@@ -411,9 +429,11 @@ let telefono = "";
 let mensajeerror = " ";
 let senial3 = 0;
 let senial4 = 0;
-let parrafo = " "
-let parrafo2 = "" 
-
+let parrafo = " ";
+let parrafo2 = "" ;
+let variableNombre = " ";
+let variableTelefono = " ";
+let variableFecha = " " ;
 
 // LLAMAR API DEL TIEMPO
 eltiempo ()
