@@ -125,15 +125,37 @@ tituloSaludo.innerHTML = ` <h2 class ="saludo"> Gracias  ${nombrege} Por tu rese
       <br>      
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5763911534164!2d-58.365075084768!3d-34.69063928043715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33328320207e3%3A0x8c3bfca0858e201!2sColegio%20Centenario%20Don%20Bosco!5e0!3m2!1ses-419!2sar!4v1646924985893!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
           
-        </iframe>  <br>  <br>  
-        
+        </iframe>  <br>  <br> 
+        <input type="button" id="enviar" value="ESTADO RESERVA" onclick="estadoreserva()">
+        <br>  <br> 
         <ul>
         <li><a href="../index.html" class="bgLight">VOLVER A HOME</a></li>
-          
+         
                   </ul>
              `;
                        }
 
+
+function estadoreserva(){
+variableNombre = localStorage.getItem("nombre");
+variableTelefono = localStorage.getItem("telefono");
+variableFecha = localStorage.getItem("fecha reserva");
+variableHora = localStorage.getItem("hora reserva");
+let miFormulario      = document.getElementById("formulario");
+ 
+   
+ // PComunico el JS con el HTML mostrando la reserva
+// capturo el elemento con id saludo y lo guardo en la variable tituloSaludo
+let tituloSaludo = document.getElementById("saludo");
+tituloSaludo.innerHTML = ` <h3 class ="saludo" class "encabezado_box--white"> Confirmada  ${variableNombre} tu reserva!  Te esperamos el ${variableFecha}
+  a las ${variableHora} HS.  Reservaste  ${productosob[cancha - 1].nombre} .Debes pagar $   ${productosob[cancha - 1].precio}
+    - Nos pondremos en contacto con vos al  ${variableTelefono}   -     TE ESPERAMOS - </h3>  <br>  <br>  
+                <ul>
+        <li><a href="../index.html" class="bgLight">VOLVER A HOME</a></li>
+          
+                  </ul>         
+             `;
+                       }
 
 function validarFormulario(e){
      e.preventDefault();
@@ -148,22 +170,16 @@ let objetoObjeto = JSON.parse(objetoCadena);
 localStorage.setItem("nombre", nombrege); 
 localStorage.setItem("telefono", telefono);
 localStorage.setItem("fecha reserva", fechar);
-variableNombre = localStorage.getItem("nombre");
-variableTelefono = localStorage.getItem("telefono");
-variableFecha = localStorage.getItem("fecha reserva");
+localStorage.setItem("hora reserva", horar);
+
+
 let todoelobjeto = localStorage.getItem(objetoCadena)
 
                            }
 
 function ingresarnombre() {  
-   variableNombre = localStorage.getItem("nombre");
-   variableTelefono = localStorage.getItem("telefono");
-   variableFecha = localStorage.getItem("fecha reserva");
-   fechar = variableFecha ;
-   nombrege =  variableNombre ;
    horar = 0;
    mensajeerror = " " ;   
-   telefono = variableTelefono;
    parrafo = " ";
    parrafo2 = "" ;    
    CLIENTES.nombre = document.getElementById("nombrege").value  ;
@@ -434,6 +450,8 @@ let parrafo2 = "" ;
 let variableNombre = " ";
 let variableTelefono = " ";
 let variableFecha = " " ;
+let variableHora = 0 ;
+
 
 // LLAMAR API DEL TIEMPO
 eltiempo ()
